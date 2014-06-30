@@ -1,15 +1,7 @@
-require 'rubygems'
-require 'rake'
-require './environment.rb'
+require_relative './config/environment.rb'
+require 'sinatra/activerecord/rake'
 
 namespace :db do
-  desc 'run existing migrations'
-  task :migrate do
-    ::Sequel.extension :migration
-    Sequel::Migrator.run DB, 'db/migrate'
-    puts '<= db:migrate executed'
-  end
-
   desc 'add test data to the database'
   task :seed do
     Song.create({
