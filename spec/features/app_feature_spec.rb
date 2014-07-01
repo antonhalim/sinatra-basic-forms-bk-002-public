@@ -6,6 +6,7 @@ describe "edits a song", :type => :feature do
       album: 'Ride the Lightning',
       genre: 'Metal',
       length: '3:25'
+    })
   end
 
   it "visits a song show page" do
