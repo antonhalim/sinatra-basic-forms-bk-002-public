@@ -11,6 +11,13 @@ describe "edits a song", :type => :feature do
   it "visits a song show page" do
     visit '/songs/1'
     click_link 'Edit'
-    expect(page).to have_content 'Success'
+    expect(page).to have_content 'Smells Like Teen Spirit'
+  end
+
+  it "does something" do
+    visit '/songs/1/edit'
+    fill_in('Artist Name', :with => 'Nirvana')
+    click('Button Value')
+    expect(page).to have_content 'Nirvana'
   end
 end
