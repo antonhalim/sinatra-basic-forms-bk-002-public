@@ -9,16 +9,18 @@ describe "edits a song", :type => :feature do
     })
   end
 
-  it "visits a song show page" do
+  it "first visits a song show page and clicks edit" do
     visit '/songs/1'
     click_link 'Edit'
-    expect(page).to have_content 'Smells Like Teen Spirit'
+    expect(current_path).to eq '/songs/1/edit'
+    expect(page).to have_content 'Save Changes'
   end
 
-  it "does something" do
+  it "changes artist and saves changes" do
     visit '/songs/1/edit'
     fill_in('Artist Name', :with => 'Nirvana')
-    click('Button Value')
+    click_button('Save Changes')
+    expect(current_path).to eq '/songs/1'
     expect(page).to have_content 'Nirvana'
   end
 end
