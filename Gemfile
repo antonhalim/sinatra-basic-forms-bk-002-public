@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'sinatra', :require => 'sinatra/base'
+gem 'sinatra', git: 'git@github.com:sinatra/sinatra.git'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 gem 'sinatra-reloader', :require => false
 gem 'sqlite3'
