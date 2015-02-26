@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'sinatra', git: 'git@github.com:sinatra/sinatra.git'
-gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
-gem 'sinatra-reloader', :require => false
+gem 'sinatra'
+gem 'sinatra-activerecord'
 gem 'sqlite3'
-gem 'activerecord', :require=> 'active_record'
+gem 'activerecord'
 gem 'rake'
+gem 'thin'
+gem 'shotgun'
 gem 'rspec'
 gem 'capybara'
 gem 'database_cleaner'
